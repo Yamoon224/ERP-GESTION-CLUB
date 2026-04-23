@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 C:\laragon\www\guinea_football_club_erp\App.xaml
-202015146066
+231762489949
 
-25-583622260
+29420966397
 2211868001970
-MainWindow.xaml;Views\ActualiteFormPage.xaml;Views\ActualitesPage.xaml;Views\BilletFormPage.xaml;Views\BilletsPage.xaml;Views\BoutiquePage.xaml;Views\ClassementFormPage.xaml;Views\ClassementPage.xaml;Views\ClubFormPage.xaml;Views\ClubsPage.xaml;Views\DashboardPage.xaml;Views\JoueurFormPage.xaml;Views\JoueursPage.xaml;Views\MatchesPage.xaml;Views\MatchFormPage.xaml;Views\PalmaresFormPage.xaml;Views\PalmaresPage.xaml;Views\PhotoFormPage.xaml;Views\PhotosPage.xaml;Views\ProduitFormPage.xaml;
+LoginWindow.xaml;MainWindow.xaml;Views\ActualiteFormPage.xaml;Views\ActualitesPage.xaml;Views\BilletFormPage.xaml;Views\BilletsPage.xaml;Views\BoutiquePage.xaml;Views\ClassementFormPage.xaml;Views\ClassementPage.xaml;Views\ClubFormPage.xaml;Views\ClubsPage.xaml;Views\DashboardPage.xaml;Views\JoueurFormPage.xaml;Views\JoueursPage.xaml;Views\MatchesPage.xaml;Views\MatchFormPage.xaml;Views\PalmaresFormPage.xaml;Views\PalmaresPage.xaml;Views\PhotoFormPage.xaml;Views\PhotosPage.xaml;Views\ProduitFormPage.xaml;Views\UserFormPage.xaml;Views\UsersPage.xaml;
 
 False
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("guinea_football_club_erp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d62fcc983332088660a1444c686269ec3abd4bce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+864ac76436452b9eb7d04df5865c6765c1c5b51e")]
 [assembly: System.Reflection.AssemblyProductAttribute("guinea_football_club_erp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("guinea_football_club_erp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

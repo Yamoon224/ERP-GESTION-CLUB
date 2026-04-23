@@ -15,4 +15,5 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<Produit> Produits => Set<Produit>();
     public DbSet<Billet> Billets => Set<Billet>();
     public DbSet<ClassementEntree> Classements => Set<ClassementEntree>();
+    public DbSet<User> Users => Set<User>();
 }

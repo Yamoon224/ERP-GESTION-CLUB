@@ -151,3 +151,18 @@ public class ClassementEntree
     public int ButsContre { get; set; }
     public int Points { get; set; }
 }
+
+public enum RoleUser { Admin, Gestionnaire, Lecteur }
+
+public class User
+{
+    public int Id { get; set; }
+    public string Username { get; set; } = string.Empty;
+    public string PasswordHash { get; set; } = string.Empty;
+    public string PasswordSalt { get; set; } = string.Empty;
+    public string NomComplet { get; set; } = string.Empty;
+    public string? Email { get; set; }
+    public RoleUser Role { get; set; } = RoleUser.Gestionnaire;
+    public bool EstActif { get; set; } = true;
+    public DateTime DateCreation { get; set; } = DateTime.UtcNow;
+}

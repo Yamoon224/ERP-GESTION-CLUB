@@ -182,3 +182,10 @@ C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\refint\guinea_f
 C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\guinea_football_club_erp.pdb
 C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\guinea_football_club_erp.genruntimeconfig.cache
 C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\ref\guinea_football_club_erp.dll
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\LoginWindow.baml
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\Views\UserFormPage.baml
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\Views\UsersPage.baml
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\LoginWindow.g.cs
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\Views\UserFormPage.g.cs
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\Views\UsersPage.g.cs
+C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\guinea_football_club_erp.sourcelink.json

@@ -1,0 +1,67 @@
+<Page x:Class="guinea_football_club_erp.Views.UserFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="White"
+      Title="Utilisateur — Formulaire">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="32" MaxWidth="540">
+
+            <Button Content="← Retour" HorizontalAlignment="Left" Click="BtnBack_Click"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,0,16"/>
+            <TextBlock x:Name="TbTitle" FontSize="24" FontWeight="Bold" Margin="0,0,0,24"/>
+
+            <!-- Nom complet -->
+            <TextBox x:Name="TbNomComplet"
+                     materialDesign:HintAssist.Hint="Nom complet *"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     Margin="0,0,0,14"/>
+
+            <!-- Nom d'utilisateur -->
+            <TextBox x:Name="TbUsername"
+                     materialDesign:HintAssist.Hint="Nom d'utilisateur *"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     Margin="0,0,0,14"/>
+
+            <!-- Mot de passe -->
+            <PasswordBox x:Name="PbPassword"
+                         materialDesign:HintAssist.Hint="Mot de passe *"
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                         Margin="0,0,0,4"/>
+            <TextBlock x:Name="TbPasswordHint" Text="Laisser vide pour ne pas modifier"
+                       FontSize="11" Foreground="#9E9E9E"
+                       Margin="0,0,0,14" Visibility="Collapsed"/>
+
+            <!-- E-mail -->
+            <TextBox x:Name="TbEmail"
+                     materialDesign:HintAssist.Hint="E-mail"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     Margin="0,0,0,14"/>
+
+            <!-- Rôle -->
+            <ComboBox x:Name="CbRole"
+                      materialDesign:HintAssist.Hint="Rôle *"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      Margin="0,0,0,14"/>
+
+            <!-- Actif -->
+            <CheckBox x:Name="ChkActif" Content="Compte actif"
+                      Margin="0,0,0,24" IsChecked="True"/>
+
+            <!-- Erreur -->
+            <TextBlock x:Name="TbError" Foreground="#D32F2F"
+                       FontSize="12" Margin="0,0,0,12"
+                       Visibility="Collapsed" TextWrapping="Wrap"/>
+
+            <!-- Actions -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="BtnDelete" Content="Supprimer" Margin="0,0,12,0"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Foreground="Red" Click="BtnDelete_Click" Visibility="Collapsed"/>
+                <Button Content="Enregistrer" Click="BtnSave_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

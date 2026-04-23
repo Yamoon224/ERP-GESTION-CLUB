@@ -1,0 +1,57 @@
+<Window x:Class="guinea_football_club_erp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Connexion — GFC ERP"
+        Height="460" Width="420"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}">
+
+    <Border Background="White">
+        <StackPanel VerticalAlignment="Center" Margin="48">
+
+            <!-- Logo -->
+            <TextBlock Text="⚽" FontSize="52" HorizontalAlignment="Center"/>
+            <TextBlock Text="GFC ERP" FontSize="26" FontWeight="Bold"
+                       HorizontalAlignment="Center" Margin="0,4,0,2"/>
+            <TextBlock Text="Guinea Football Club" FontSize="12" Foreground="#9E9E9E"
+                       HorizontalAlignment="Center" Margin="0,0,0,36"/>
+
+            <!-- Champs -->
+            <TextBox x:Name="TbUsername"
+                     materialDesign:HintAssist.Hint="Nom d'utilisateur"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     Margin="0,0,0,16"
+                     KeyDown="Input_KeyDown"/>
+
+            <PasswordBox x:Name="PbPassword"
+                         materialDesign:HintAssist.Hint="Mot de passe"
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                         Margin="0,0,0,6"
+                         KeyDown="Input_KeyDown"/>
+
+            <!-- Message d'erreur -->
+            <TextBlock x:Name="TbError"
+                       Foreground="#D32F2F"
+                       FontSize="12"
+                       Margin="0,0,0,16"
+                       Visibility="Collapsed"
+                       TextWrapping="Wrap"/>
+
+            <!-- Bouton -->
+            <Button Content="Se connecter"
+                    Click="BtnLogin_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    HorizontalAlignment="Stretch"
+                    Height="44"
+                    FontSize="14"/>
+
+            <!-- Version -->
+            <TextBlock Text="v1.0.0 — 2026" FontSize="10" Foreground="#BDBDBD"
+                       HorizontalAlignment="Center" Margin="0,24,0,0"/>
+        </StackPanel>
+    </Border>
+</Window>

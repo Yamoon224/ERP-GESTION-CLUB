@@ -43,7 +43,22 @@
 
                 <TextBlock DockPanel.Dock="Bottom" Text="v1.0.0 — 2026"
                            Foreground="#88FFFFFF" FontSize="10"
-                           HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                           HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+                <!-- Utilisateur connecté + déconnexion -->
+                <StackPanel DockPanel.Dock="Bottom" Margin="10,0,10,6">
+                    <Separator Background="#44FFFFFF" Margin="0,6,0,8"/>
+                    <TextBlock x:Name="TbUserName" Text="—"
+                               Foreground="White" FontWeight="Medium"
+                               HorizontalAlignment="Center" FontSize="13"/>
+                    <TextBlock x:Name="TbUserRole" Text="—"
+                               Foreground="#CCFFFFFF"
+                               HorizontalAlignment="Center" FontSize="11" Margin="0,2,0,6"/>
+                    <Button Content="🚨  Déconnexion" Click="BtnLogout_Click"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Foreground="White" HorizontalAlignment="Stretch"
+                            Height="32" FontSize="12"/>
+                </StackPanel>
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="8,4,8,8">
@@ -57,6 +72,9 @@
                         <Button Style="{StaticResource NavButtonStyle}" Tag="Classement" Content="🏆  Classement"        Click="Nav_Click"/>
                         <Button Style="{StaticResource NavButtonStyle}" Tag="Palmares"   Content="🥇  Palmarès"          Click="Nav_Click"/>
                         <Button Style="{StaticResource NavButtonStyle}" Tag="Photos"     Content="📷  Photos"            Click="Nav_Click"/>
+                        <Separator Background="#44FFFFFF" Margin="4,8,4,4"/>
+                        <Button x:Name="BtnNavUsers" Style="{StaticResource NavButtonStyle}" Tag="Users"
+                                Content="👥  Utilisateurs"       Click="Nav_Click" Visibility="Collapsed"/>
                     </StackPanel>
                 </ScrollViewer>
             </DockPanel>
