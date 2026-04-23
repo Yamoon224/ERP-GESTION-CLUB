@@ -1,0 +1,33 @@
+<Page x:Class="guinea_football_club_erp.Views.BilletFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Billet — Formulaire">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="32" MaxWidth="600">
+            <Button Content="← Retour" HorizontalAlignment="Left" Click="BtnBack_Click"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,0,16"/>
+            <TextBlock x:Name="TbTitle" FontSize="24" FontWeight="Bold" Margin="0,0,0,24"/>
+
+            <ComboBox x:Name="CbClub"   materialDesign:HintAssist.Hint="Club" Margin="0,0,0,12"
+                      DisplayMemberPath="Nom" SelectedValuePath="Id"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}" SelectionChanged="CbClub_Changed"/>
+            <ComboBox x:Name="CbMatch"  materialDesign:HintAssist.Hint="Match" Margin="0,0,0,12"
+                      DisplayMemberPath="Adversaire" SelectedValuePath="Id"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+            <ComboBox x:Name="CbType"   materialDesign:HintAssist.Hint="Type de place" Margin="0,0,0,12"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+            <TextBox x:Name="TbPrix"    materialDesign:HintAssist.Hint="Prix" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbTotal"   materialDesign:HintAssist.Hint="Nombre total" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbDispo"   materialDesign:HintAssist.Hint="Nombre disponible" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+                <Button x:Name="BtnDelete" Content="Supprimer" Margin="0,0,12,0"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Foreground="Red" Click="BtnDelete_Click" Visibility="Collapsed"/>
+                <Button Content="Enregistrer" Click="BtnSave_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

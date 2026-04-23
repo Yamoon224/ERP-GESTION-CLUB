@@ -1,0 +1,70 @@
+<Page x:Class="guinea_football_club_erp.Views.ClassementPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="White"
+      Title="Classement">
+    <DockPanel Margin="24">
+
+        <!-- Header -->
+        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,16">
+            <TextBlock Text="Classement" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center" DockPanel.Dock="Left"/>
+            <Button Content="+ Nouvelle entrée" Margin="16,0,0,0" Click="BtnAdd_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    DockPanel.Dock="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="TbSearch" HorizontalAlignment="Right" Width="240"
+                     VerticalAlignment="Center" Height="36"
+                     materialDesign:HintAssist.Hint="🔍 Rechercher..."
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     TextChanged="TbSearch_TextChanged"/>
+        </DockPanel>
+
+        <!-- Pagination -->
+        <Border DockPanel.Dock="Bottom" Margin="0,10,0,0" Padding="8,6"
+                Background="#F5F5F5" CornerRadius="6"
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <DockPanel>
+                <Button x:Name="BtnPrev" Content="◀ Précédent" Click="BtnPrev_Click"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        DockPanel.Dock="Left" Height="32" Padding="12,0"/>
+                <Button x:Name="BtnNext" Content="Suivant ▶" Click="BtnNext_Click"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        DockPanel.Dock="Right" Height="32" Padding="12,0"/>
+                <TextBlock x:Name="TbPageInfo" HorizontalAlignment="Center"
+                           VerticalAlignment="Center" FontSize="13" Foreground="#616161"/>
+            </DockPanel>
+        </Border>
+
+        <!-- DataGrid -->
+        <Border CornerRadius="8" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="#BDBDBD" BlurRadius="16" ShadowDepth="2"
+                                  Opacity="0.35" Direction="270"/>
+            </Border.Effect>
+            <Border CornerRadius="8" ClipToBounds="True"
+                    BorderBrush="#E0E0E0" BorderThickness="1">
+                <DataGrid x:Name="DgClassement" AutoGenerateColumns="False"
+                          CanUserResizeRows="False" Background="White"
+                          materialDesign:DataGridAssist.ColumnHeaderPadding="8,6,8,6"
+                          SelectionChanged="Dg_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="#"          Binding="{Binding Position}"   Width="40"/>
+                        <DataGridTextColumn Header="Club"       Binding="{Binding Club.Nom}"   Width="*"/>
+                        <DataGridTextColumn Header="Compétition" Binding="{Binding Competition}" Width="*"/>
+                        <DataGridTextColumn Header="Saison"     Binding="{Binding Saison}"     Width="80"/>
+                        <DataGridTextColumn Header="Cat."       Binding="{Binding Categorie}"  Width="80"/>
+                        <DataGridTextColumn Header="J"          Binding="{Binding Joues}"      Width="40"/>
+                        <DataGridTextColumn Header="V"          Binding="{Binding Victoires}"  Width="40"/>
+                        <DataGridTextColumn Header="N"          Binding="{Binding Nuls}"       Width="40"/>
+                        <DataGridTextColumn Header="D"          Binding="{Binding Defaites}"   Width="40"/>
+                        <DataGridTextColumn Header="BP"         Binding="{Binding ButsPour}"   Width="45"/>
+                        <DataGridTextColumn Header="BC"         Binding="{Binding ButsContre}" Width="45"/>
+                        <DataGridTextColumn Header="Pts"        Binding="{Binding Points}"     Width="50"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Border>
+
+    </DockPanel>
+</Page>

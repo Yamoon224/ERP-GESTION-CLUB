@@ -1,0 +1,32 @@
+<Page x:Class="guinea_football_club_erp.Views.ClubFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Club — Formulaire">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="32" MaxWidth="600">
+            <Button Content="← Retour" HorizontalAlignment="Left" Click="BtnBack_Click"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,0,16"/>
+            <TextBlock x:Name="TbTitle" FontSize="24" FontWeight="Bold" Margin="0,0,0,24"/>
+
+            <TextBox x:Name="TbId"          materialDesign:HintAssist.Hint="Identifiant (ex: jag)" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbNom"         materialDesign:HintAssist.Hint="Nom complet" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbAcronyme"    materialDesign:HintAssist.Hint="Acronyme" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbVille"       materialDesign:HintAssist.Hint="Ville" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbFondation"   materialDesign:HintAssist.Hint="Date de fondation" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbCouleurP"    materialDesign:HintAssist.Hint="Couleur primaire (#hex)" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbCouleurS"    materialDesign:HintAssist.Hint="Couleur secondaire (#hex)" Margin="0,0,0,12" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <TextBox x:Name="TbDescription" materialDesign:HintAssist.Hint="Description" Margin="0,0,0,12"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     AcceptsReturn="True" TextWrapping="Wrap" Height="80"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+                <Button x:Name="BtnDelete" Content="Supprimer" Margin="0,0,12,0"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Foreground="Red" Click="BtnDelete_Click" Visibility="Collapsed"/>
+                <Button Content="Enregistrer" Click="BtnSave_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

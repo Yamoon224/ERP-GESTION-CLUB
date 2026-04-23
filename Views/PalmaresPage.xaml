@@ -1,0 +1,63 @@
+<Page x:Class="guinea_football_club_erp.Views.PalmaresPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="White"
+      Title="Palmarès">
+    <DockPanel Margin="24">
+
+        <!-- Header -->
+        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,16">
+            <TextBlock Text="Palmarès" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center" DockPanel.Dock="Left"/>
+            <Button Content="+ Nouveau titre" Margin="16,0,0,0" Click="BtnAdd_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    DockPanel.Dock="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="TbSearch" HorizontalAlignment="Right" Width="240"
+                     VerticalAlignment="Center" Height="36"
+                     materialDesign:HintAssist.Hint="🔍 Rechercher..."
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     TextChanged="TbSearch_TextChanged"/>
+        </DockPanel>
+
+        <!-- Pagination -->
+        <Border DockPanel.Dock="Bottom" Margin="0,10,0,0" Padding="8,6"
+                Background="#F5F5F5" CornerRadius="6"
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <DockPanel>
+                <Button x:Name="BtnPrev" Content="◀ Précédent" Click="BtnPrev_Click"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        DockPanel.Dock="Left" Height="32" Padding="12,0"/>
+                <Button x:Name="BtnNext" Content="Suivant ▶" Click="BtnNext_Click"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        DockPanel.Dock="Right" Height="32" Padding="12,0"/>
+                <TextBlock x:Name="TbPageInfo" HorizontalAlignment="Center"
+                           VerticalAlignment="Center" FontSize="13" Foreground="#616161"/>
+            </DockPanel>
+        </Border>
+
+        <!-- DataGrid -->
+        <Border CornerRadius="8" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="#BDBDBD" BlurRadius="16" ShadowDepth="2"
+                                  Opacity="0.35" Direction="270"/>
+            </Border.Effect>
+            <Border CornerRadius="8" ClipToBounds="True"
+                    BorderBrush="#E0E0E0" BorderThickness="1">
+                <DataGrid x:Name="DgPalmares" AutoGenerateColumns="False"
+                          CanUserResizeRows="False" Background="White"
+                          materialDesign:DataGridAssist.ColumnHeaderPadding="8,6,8,6"
+                          SelectionChanged="Dg_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Club"        Binding="{Binding Club.Acronyme}" Width="80"/>
+                        <DataGridTextColumn Header="Compétition" Binding="{Binding Competition}"   Width="*"/>
+                        <DataGridTextColumn Header="Année"       Binding="{Binding Annee}"         Width="70"/>
+                        <DataGridTextColumn Header="Rang"        Binding="{Binding Rang}"          Width="90"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}"   Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Border>
+
+    </DockPanel>
+</Page>

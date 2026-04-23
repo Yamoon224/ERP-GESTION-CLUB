@@ -1,0 +1,33 @@
+<Page x:Class="guinea_football_club_erp.Views.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Tableau de bord">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="32">
+            <!-- Header -->
+            <TextBlock Text="Tableau de bord" FontSize="28" FontWeight="Bold" Margin="0,0,0,8"/>
+            <TextBlock x:Name="TbDate" FontSize="13" Foreground="{DynamicResource MaterialDesign.Brush.ForegroundLight}" Margin="0,0,0,24"/>
+
+            <!-- Stats Cards -->
+            <WrapPanel x:Name="CardsPanel" Orientation="Horizontal"/>
+
+            <!-- Séparateur -->
+            <Separator Margin="0,24,0,16"/>
+            <TextBlock Text="Derniers matchs" FontSize="18" FontWeight="Medium" Margin="0,0,0,12"/>
+
+            <DataGrid x:Name="DgMatches" AutoGenerateColumns="False" IsReadOnly="True"
+                      CanUserResizeRows="False" HeadersVisibility="Column"
+                      materialDesign:DataGridAssist.ColumnHeaderPadding="8,6,8,6"
+                      MaxHeight="220">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Club"       Binding="{Binding Club.Acronyme}" Width="80"/>
+                    <DataGridTextColumn Header="Adversaire" Binding="{Binding Adversaire}"    Width="*"/>
+                    <DataGridTextColumn Header="Date"       Binding="{Binding DateMatch}"     Width="120"/>
+                    <DataGridTextColumn Header="Score"      Binding="{Binding Score}"         Width="80"/>
+                    <DataGridTextColumn Header="Statut"     Binding="{Binding Statut}"        Width="90"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
