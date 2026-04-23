@@ -21,7 +21,22 @@ public partial class App : Application
             .UseSqlite($"Data Source={dbPath}")
             .Options;
         Db = new AppDbContext(options);
-        Db.Database.EnsureCreated();
+
+        // Créer la table Users si elle n'existe pas encore
+        // (la DB peut exister déjà via l'API, EnsureCreated() n'ajouterait pas les tables manquantes)
+        Db.Database.ExecuteSqlRaw("""
+            CREATE TABLE IF NOT EXISTS "Users" (
+                "Id"           INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+                "Username"     TEXT    NOT NULL,
+                "PasswordHash" TEXT    NOT NULL,
+                "PasswordSalt" TEXT    NOT NULL,
+                "NomComplet"   TEXT    NOT NULL,
+                "Email"        TEXT,
+                "Role"         INTEGER NOT NULL DEFAULT 1,
+                "EstActif"     INTEGER NOT NULL DEFAULT 1,
+                "DateCreation" TEXT    NOT NULL DEFAULT (datetime('now'))
+            )
+            """);
 
         // Créer le compte admin par défaut si aucun utilisateur n'existe
         if (!Db.Users.Any())
