@@ -13,6 +13,7 @@ public partial class App : Application
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
+        ShutdownMode = ShutdownMode.OnExplicitShutdown;
 
         var dbPath = System.IO.Path.Combine(
             @"C:\laragon\www\guinea_football_club_api",
@@ -64,6 +65,7 @@ public partial class App : Application
         CurrentUser = login.AuthenticatedUser!;
 
         var main = new MainWindow();
+        ShutdownMode = ShutdownMode.OnLastWindowClose;
         main.Show();
     }
 

@@ -8,12 +8,12 @@ C:\laragon\www\guinea_football_club_erp\obj\Debug\net9.0-windows\
 guinea_football_club_erp
 none
 false
-TRACE;DEBUG;NET;NET9_0;NETCOREAPP
+TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\laragon\www\guinea_football_club_erp\App.xaml
 231762489949
 
 29420966397
-2211868001970
+221-1845109208
 LoginWindow.xaml;MainWindow.xaml;Views\ActualiteFormPage.xaml;Views\ActualitesPage.xaml;Views\BilletFormPage.xaml;Views\BilletsPage.xaml;Views\BoutiquePage.xaml;Views\ClassementFormPage.xaml;Views\ClassementPage.xaml;Views\ClubFormPage.xaml;Views\ClubsPage.xaml;Views\DashboardPage.xaml;Views\JoueurFormPage.xaml;Views\JoueursPage.xaml;Views\MatchesPage.xaml;Views\MatchFormPage.xaml;Views\PalmaresFormPage.xaml;Views\PalmaresPage.xaml;Views\PhotoFormPage.xaml;Views\PhotosPage.xaml;Views\ProduitFormPage.xaml;Views\UserFormPage.xaml;Views\UsersPage.xaml;
 
 False

@@ -89,7 +89,6 @@ C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\System.Composit
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\System.Composition.Hosting.dll
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\System.Composition.Runtime.dll
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\System.Composition.TypedParts.dll
-C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\System.Text.Json.dll
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\de\Microsoft.CodeAnalysis.resources.dll
 C:\laragon\www\guinea_football_club_erp\bin\Debug\net9.0-windows\es\Microsoft.CodeAnalysis.resources.dll
